@@ -1,4 +1,3 @@
-import React from 'react'
 import { View, Modal, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 type AddNoteModalProps = {

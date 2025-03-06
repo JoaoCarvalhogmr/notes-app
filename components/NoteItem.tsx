@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native"
 
 export type NoteItemProps = {
   text: string,
-  id: string
+  $id: string
 }
 
 const NoteItem = (item: NoteItemProps) => {
