@@ -10,6 +10,10 @@ const config = {
     }
 };
 
+if (!config.endpoint || !config.projectId) {
+    throw new Error("Missing Appwrite credentials");
+}
+
 const client = new Client()
     .setEndpoint(config.endpoint)
     .setProject(config.projectId);
@@ -18,10 +22,10 @@ const database = new Databases(client);
 
 switch(Platform.OS) {
     case "ios": 
-        client.setPlatform(process.env.EXPO_PUBLIC_APPWRITE_BUNDLE_ID);
+        client.setPlatform(process.env.EXPO_PUBLIC_APPWRITE_BUNDLE_ID || "");
         break;
     case "android": 
-        client.setPlatform(process.env.EXPO_PUBLIC_APPWRITE_PACKAGE_NAME);
+        client.setPlatform(process.env.EXPO_PUBLIC_APPWRITE_PACKAGE_NAME || "");
         break;
 }
 
