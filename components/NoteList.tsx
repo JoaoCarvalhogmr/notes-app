@@ -1,19 +1,23 @@
 import { FlatList } from 'react-native'
-import { type NoteItemProps as Note} from './NoteItem'
 import NoteItem from './NoteItem'
+import {type Note} from "@/types"
 
 type NoteListProps = {
-   notes: Note[]
+   notes: Note[],
+   onDelete: (id: string) => void,
+   onEdit: (id: string, text: string) => Promise<void>
 }
-const NoteList = ({notes}: NoteListProps) => {
+
+const NoteList = ({notes, onDelete, onEdit}: NoteListProps) => {
   return (
     <FlatList 
-    data={notes}
-    keyExtractor={(item) => item.$id}
-    renderItem={({item}) => (
-        <NoteItem {...item} />
-    )}
-/>  )
+      data={notes}
+      keyExtractor={(item) => item.$id}
+      renderItem={({item}) => (
+        <NoteItem note={item} onDelete={onDelete} onEdit={onEdit} />
+      )}
+    />
+  )
 }
 
 export default NoteList
