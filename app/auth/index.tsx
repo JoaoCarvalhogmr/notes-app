@@ -66,6 +66,7 @@ const AuthScreen = () => {
                 value={credentials.password}
                 onChangeText={(e) => handleChange(e, "password")}
                 secureTextEntry
+                textContentType="none"
             />
             {isRegistering && (
             <TextInput
@@ -75,6 +76,7 @@ const AuthScreen = () => {
                 value={credentials.confirmPassword}
                 onChangeText={(e) => handleChange(e, "confirmPassword")}
                 secureTextEntry
+                textContentType="none"
             />
             )}
             <TouchableOpacity style={styles.button} onPress={handleAuth}>
