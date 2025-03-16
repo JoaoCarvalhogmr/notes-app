@@ -7,13 +7,17 @@ type DocData = {
 
 const databaseService = {
     //List documents
-    async listDocuments(dbId: string, colId: string) {
+    async listDocuments(dbId: string, colId: string, queries: string[] = []) {
         try {
-            const response = await database.listDocuments(dbId, colId);
-            return response.documents || [];
+            const response = await database.listDocuments(dbId, colId, queries);
+            return {
+                data: response.documents || [],
+                error: null
+            }
         } catch (error: unknown) {
             console.error("Error fetching documents:", error instanceof Error ? error.message : error)
             return {
+                data: [],
                 error: error instanceof Error ? error.message : String(error)
             }
         }

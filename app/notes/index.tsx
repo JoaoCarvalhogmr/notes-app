@@ -38,7 +38,7 @@ const NotesScreen = () => {
 
     const fetchNotes = async() => {
         setLoading(true);
-        const response = await noteService.getNotes();
+        const response = await noteService.getNotes(user.$id);
 
         if(response.error) {
             setError(response.error);
@@ -60,7 +60,8 @@ const NotesScreen = () => {
         if(newNote.trim() === "") {
             return;
         }
-        const response = await noteService.addNote(newNote);
+        
+        const response = await noteService.addNote(newNote, user.$id);
 
         if(response.error) {
             setError(response.error);
