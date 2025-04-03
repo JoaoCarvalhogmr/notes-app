@@ -1,8 +1,24 @@
-# Welcome to your Expo app 👋
+# Notes App 📝
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, cross-platform notes application built with Expo and React Native. This app allows users to create, manage, and organize their notes with an intuitive interface.
 
-## Get started
+## Features
+
+- 📱 Cross-platform support (iOS, Android, and Web)
+- 🔐 User authentication
+- 📝 Create and edit notes
+- 🗂️ Organize notes
+- 💫 Modern and responsive UI
+- 🌙 Dark mode support
+
+## Tech Stack
+
+- [Expo](https://expo.dev) - React Native development platform
+- [React Native](https://reactnative.dev) - Mobile app framework
+- [Appwrite](https://appwrite.io) - Backend as a Service
+- TypeScript - Type safety and better development experience
+
+## Getting Started
 
 1. Install dependencies
 
@@ -23,28 +39,21 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Project Structure
 
-## Get a fresh project
+- `/app` - Main application code with file-based routing
+- `/components` - Reusable UI components
+- `/contexts` - React Context providers
+- `/services` - API and service integrations
+- `/types` - TypeScript type definitions
+- `/assets` - Static assets like images and fonts
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
+## Learn More
 
 To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Expo documentation](https://docs.expo.dev/)
+- [React Native documentation](https://reactnative.dev/docs/getting-started)
+- [Appwrite documentation](https://appwrite.io/docs)
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
